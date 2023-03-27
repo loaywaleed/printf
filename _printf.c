@@ -35,7 +35,8 @@ int _printf(const char *format, ...)
 				string = va_arg(args, char *);
 				if (string == (NULL))
 				{
-					return (-1);
+					_printf("(null)");
+					return (6);
 				}
 				for (j = 0; string[j]; j++)
 				{
