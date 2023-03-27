@@ -36,9 +36,12 @@ int _printf(const char *format, ...)
 				}
 				break;
 				default:
-				put_char('%');
-				put_char(format[i + 1]);
-				len += 2;
+				if (format[i + 1] != '\0')
+				{
+					put_char('%');
+					put_char(format[i + 1]);
+					len += 2;
+				}
 			}
 			i++;
 		}
