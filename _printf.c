@@ -39,6 +39,12 @@ int _printf(const char *format, ...)
 					len++;
 				}
 				break;
+
+				case '%':
+				put_char(%);
+				len++;
+				break;
+
 				default:
 				if (format[i + 1] != '\0')
 				{
