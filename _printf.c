@@ -10,8 +10,12 @@ int _printf(const char *format, ...)
 {
 	int i, j, len = 0;
 	va_list args;
-
+	
 	va_start(args, format);
+	if (format == (NULL))
+	{
+		return (-1);
+	}
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
@@ -52,4 +56,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	return (len);
+	va_end(args);
 }
