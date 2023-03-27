@@ -32,9 +32,13 @@ int _printf(const char *format, ...)
 				for (j = 0; string[j]; j++)
 				{
 					put_char(string[j]);
-					len++
+					len++;
 				}
 				break;
+				default:
+				put_char('%');
+				put_char(format[i + 1]);
+				len += 2;
 			}
 			i++;
 		}

@@ -6,6 +6,7 @@
 int main(void)
 {
 	char str = 'n';
-	_printf("hello, %c\n", str);
+	int len = _printf("hello, %c\n", str);
+	printf("%d\n", len);
 	return (0);
 }
