@@ -33,6 +33,10 @@ int _printf(const char *format, ...)
 
 				case 's':
 				string = va_arg(args, char *);
+				if (string == (NULL))
+				{
+					return (-1);
+				}
 				for (j = 0; string[j]; j++)
 				{
 					put_char(string[j]);
