@@ -84,7 +84,7 @@ int print_int(va_list args)
 	num_str = int_to_str(num);
 	if (num_str == (NULL))
 	{
-		return (-1);
+		exit(-1);
 	}
 	for (j = 0; num_str[j]; j++)
 	{
