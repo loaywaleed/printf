@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 				break;
 				case 'd':
 				case 'i':
-				lenght += print_int(args);
+				length += print_int(args);
 				break;
 				default:
 				length += print_default(format, i);
