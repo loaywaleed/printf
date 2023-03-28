@@ -23,7 +23,8 @@ int _printf(const char *format, ...)
 			switch (format[i + 1])
 			{
 				char temp;
-				char *string, *str;
+				char *string;
+				char *str;
 
 				case 'c':
 				temp = va_arg(args, int);
