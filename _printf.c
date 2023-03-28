@@ -38,14 +38,14 @@ int _printf(const char *format, ...)
 				{
 					str = "(null)";
 					write(1, str, 6);
-					length += 6;
+					len += 6;
 				}
 				else
 				{
 					for (j = 0; string[j]; j++)
 					{
 						put_char(string[j]);
-						len ++;
+						len++;
 					}
 				}
 				break;
