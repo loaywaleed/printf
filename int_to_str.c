@@ -2,10 +2,8 @@
 
 /**
  * int_to_str - turns intger to string
- * @num: num
+ * @num: input number
  * Return: str
- *
- *
  */
 char *int_to_str(int num)
 {
