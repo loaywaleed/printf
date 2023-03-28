@@ -36,16 +36,16 @@ int _printf(const char *format, ...)
 				string = va_arg(args, char *);
 				if (string == (NULL))
 				{
-					_printf("(null)");
-					return (6);
+					str = "(null)";
+					write(1, str, 6);
+					length += 6;
 				}
 				else
 				{
 					for (j = 0; string[j]; j++)
 					{
-						str = "(null)";
-						write(1, str, 6);
-						len += 6;
+						put_char(string[j]);
+						len ++;
 					}
 				}
 				break;
