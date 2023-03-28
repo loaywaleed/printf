@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 			switch (format[i + 1])
 			{
 				char temp;
-				char *string;
+				char *string, str;
 
 				case 'c':
 				temp = va_arg(args, int);
@@ -38,10 +38,14 @@ int _printf(const char *format, ...)
 					_printf("(null)");
 					return (6);
 				}
-				for (j = 0; string[j]; j++)
+				else
 				{
-					put_char(string[j]);
-					len++;
+					for (j = 0; string[j]; j++)
+					{
+						str = "(null)"
+						write(1, str, 6);
+						len += 6;
+					}
 				}
 				break;
 
