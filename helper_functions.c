@@ -64,6 +64,6 @@ int print_default(const char *format, int index)
 	}
 	else
 	{
-		exit (-1);
+		exit(-1);
 	}
 }
