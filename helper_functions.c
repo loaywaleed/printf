@@ -67,3 +67,30 @@ int print_default(const char *format, int index)
 		exit(-1);
 	}
 }
+
+/**
+ * print_int - prints an intger
+ * @args: args
+ * Return: len
+ */
+
+int print_int(va_list args)
+{
+	int num;
+	char *num_str;
+	int j, len = 0;
+
+	num = va_arg(args, int);
+	num_str = int_to_str(num);
+	if (num_str == (NULL))
+	{
+		return (-1);
+	}
+	for (j = 0; num_str[j]; j++)
+	{
+		put_char(num_str[j]);
+		len++;
+	}
+	free(num_str);
+	return (len);
+}
